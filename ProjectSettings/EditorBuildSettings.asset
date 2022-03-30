@@ -6,9 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/FristRoom.unity
+    path: Assets/Scenes/Menu.unity
+    guid: 0733f81cc0a1ced46aaf31930f39cb05
+  - enabled: 1
+    path: Assets/Scenes/Town.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Dungeon_1.unity
     guid: 8144c67775ab96c48b219633b6b4d284
+  - enabled: 1
+    path: Assets/Scenes/BossBattle_1.unity
+    guid: c18a274c4c167a14a83f2e1ae55d997c
   m_configObjects: {}

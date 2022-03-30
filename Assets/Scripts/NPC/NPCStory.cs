@@ -22,12 +22,19 @@ public class NPCStory : Collidable
         }
     }
 
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && typeTextNow)
         {
             dialogueManager.StartDialogue(dialogue);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.tag == "Player")
+        {
+            typeTextNow = false;
         }
     }
 

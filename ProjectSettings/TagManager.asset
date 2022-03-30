@@ -11,19 +11,19 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Floor
   - 
   - Blocking
   - Actor
   - Player
   - Enemie
   - Weapon
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Bullet
+  - UltimateBullet
+  - NormalSkill
+  - EnemyZone
+  - EnemyBullet
+  - BossSkill
   - 
   - 
   - 

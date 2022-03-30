@@ -8,13 +8,14 @@ public class Gate : MonoBehaviour
     public LayerMask whatIsPlayer;
     public float radiusCheck;
     public Transform checkPoint;
+    public int nextScene;
 
     bool CheckPlayer()
     {
         Collider2D collider = Physics2D.OverlapCircle(checkPoint.position, radiusCheck, whatIsPlayer);
         if(collider != null)
         {
-            Debug.Log("Cham vao player");
+            Debug.Log("Gate Check Player");
             return true;
         }
         return false;
@@ -30,7 +31,7 @@ public class Gate : MonoBehaviour
     {
         if (CheckPlayer())
         {
-            SceneManager.LoadScene(1);
+            ScenesManager.instance.ChangeScene(nextScene);
         }
     }
 }

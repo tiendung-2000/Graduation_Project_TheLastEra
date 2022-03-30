@@ -53,18 +53,48 @@
     <UnityVersion>2020.3.26f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Collidable.cs" />
-    <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\Manager\ScenesManager.cs" />
+    <Compile Include="Assets\Scripts\Player\RangerWeapon.cs" />
+    <Compile Include="Assets\Scripts\Enemies\BulletEnemy.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerSkill.cs" />
+    <Compile Include="Assets\Scripts\UI\SlotObj\SlotStore.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_Canvas\UI_GameOverCanvas.cs" />
+    <Compile Include="Assets\Scripts\UI\Item\Item.cs" />
+    <Compile Include="Assets\Scripts\NPC\NPC_Store.cs" />
+    <Compile Include="Assets\Scripts\Dialouge\Collidable.cs" />
+    <Compile Include="Assets\Scripts\Manager\BagManager.cs" />
+    <Compile Include="Assets\Scripts\Object\Bullet.cs" />
+    <Compile Include="Assets\Scripts\UI\Barcontroller\UI_BarManager.cs" />
+    <Compile Include="Assets\Scripts\UI\Barcontroller\UI_BarController.cs" />
+    <Compile Include="Assets\Scripts\Bosses\BossSkill2.cs" />
+    <Compile Include="Assets\Scripts\UI\Store\TabButton.cs" />
+    <Compile Include="Assets\Scripts\UI\Store\StorePage.cs" />
+    <Compile Include="Assets\Scripts\Object\DontDestroyThis.cs" />
+    <Compile Include="Assets\Scripts\EnemyZone\EnemyZone.cs" />
+    <Compile Include="Assets\Scripts\UI\Barcontroller\UI_Health_Enemy_Bar.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\Object\CameraMotor.cs" />
-    <Compile Include="Assets\Scripts\Enemies\Zombie.cs" />
-    <Compile Include="Assets\Scripts\Shooting.cs" />
+    <Compile Include="Assets\Scripts\Bosses\TheFirstBoss.cs" />
+    <Compile Include="Assets\Scripts\Enemies\MeleeEnemy.cs" />
+    <Compile Include="Assets\Scripts\Manager\BudgetManager.cs" />
+    <Compile Include="Assets\Scripts\UI\SlotObj\SlotUI.cs" />
+    <Compile Include="Assets\Scripts\Enemies\RangerEnemy.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_Canvas\UI_Canvas.cs" />
+    <Compile Include="Assets\Scripts\Player\Shooting.cs" />
     <Compile Include="Assets\Scripts\Dialouge\DialogueManager.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_Manager.cs" />
+    <Compile Include="Assets\Scripts\UI\MenuUI\ClickButton.cs" />
+    <Compile Include="Assets\Scripts\UI\SlotObj\SlotBag.cs" />
     <Compile Include="Assets\Scripts\Dialouge\Dialogue.cs" />
-    <Compile Include="Assets\Scripts\Chest.cs" />
+    <Compile Include="Assets\Scripts\Object\Chest.cs" />
     <Compile Include="Assets\Scripts\Object\Gate.cs" />
+    <Compile Include="Assets\Scripts\UI\Store\TabGroup.cs" />
+    <Compile Include="Assets\Scripts\UI\Barcontroller\UI_Health_Player_Bar.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\NPC\NPCStory.cs" />
-    <Compile Include="Assets\Scripts\RangerWeapon.cs" />
+    <Compile Include="Assets\Scripts\Player\Skill.cs" />
+    <Compile Include="Assets\Scripts\Bosses\TheSecondBoss.cs" />
+    <Compile Include="Assets\Scripts\Bosses\FinalBoss.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -311,6 +341,9 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>F:\Unity\2020.3.26f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+      <HintPath>Assets\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
@@ -752,6 +785,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="PackageToolsEditor.csproj">
+      <Project>{DC5C40F9-B130-6485-DFDA-77A08FA6B082}</Project>
+      <Name>PackageToolsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProject.csproj">
+      <Project>{E735045C-E4C7-7430-BF12-39061258000C}</Project>
+      <Name>AstarPathfindingProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
+      <Project>{D9F2DB43-9DC8-7275-5990-679C3B045F7A}</Project>
+      <Name>AstarPathfindingProjectEditor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
