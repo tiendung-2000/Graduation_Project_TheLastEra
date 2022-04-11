@@ -31,7 +31,17 @@ public class Gate : MonoBehaviour
     {
         if (CheckPlayer())
         {
+            SavePlayerData();
             ScenesManager.instance.ChangeScene(nextScene);
         }
+    }
+    private void SavePlayerData()
+    {
+        var player = FindObjectOfType<Player>();
+        var gc = GameController.Instance;
+        gc.playerCurrentHealth = player.currentHealth;
+        gc.maxHealthP = player.maxHealthP;
+        gc.playerCurrentMana = player.currentMana;
+        gc.maxManaP = player.maxManaP;
     }
 }

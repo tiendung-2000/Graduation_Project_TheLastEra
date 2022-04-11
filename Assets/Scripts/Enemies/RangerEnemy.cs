@@ -68,15 +68,14 @@ public class RangerEnemy : MonoBehaviour
             Destroy(gameObject, 1f);
         }
 
-        if (!PlayerSkill.instance.enemieStopMove)
-        {
-            //enemie move
-        }
+        //if (!PlayerSkill.instance.enemieStopMove)
+        //{
+        //    //enemie move
+        //}
     }
 
     void Update()
     {
-        
         if (timeCoolDown <= 0f && enemyAI.canShot)
         {
             GameObject bulletCreate=

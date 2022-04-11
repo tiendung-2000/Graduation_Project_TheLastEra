@@ -19,5 +19,7 @@ public class UI_GameOverCanvas : UI_Canvas
     }
     void BackToTown() {
         ScenesManager.instance.ChangeScene(1);
+        //GameController.Instance.playerCurrentHealth = GameController.Instance.maxHealthP;
+        //GameController.Instance.playerCurrentMana = GameController.Instance.maxManaP;       
     }
 }

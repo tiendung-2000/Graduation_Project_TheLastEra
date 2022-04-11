@@ -4,8 +4,5 @@ using UnityEngine;
 
 public class UI_Health_Player_Bar : UI_BarController
 {
-    public override void Start()
-    {
-        base.Start();
-    }
+
 }

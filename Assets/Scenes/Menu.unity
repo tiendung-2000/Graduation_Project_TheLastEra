@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 187640298}
   - component: {fileID: 187640300}
   - component: {fileID: 187640299}
+  - component: {fileID: 187640301}
   m_Layer: 5
   m_Name: Play Button
   m_TagString: Untagged
@@ -160,8 +161,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000030518, y: 0.000015259}
-  m_SizeDelta: {x: 521.019, y: 263.252}
+  m_AnchoredPosition: {x: 0.000015259, y: 0}
+  m_SizeDelta: {x: 232.0192, y: 117.2309}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &187640296
 MonoBehaviour:
@@ -371,6 +372,18 @@ MonoBehaviour:
   _compressClip: {fileID: 8300000, guid: 690501a2941baec4498e6771ef14161c, type: 3}
   _uncompressClip: {fileID: 8300000, guid: cb22c7cbe4151b242a7cb133fcbab6e4, type: 3}
   _source: {fileID: 187640299}
+--- !u!114 &187640301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187640294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87794b6bce8134c4f95f902f6d6b3981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &871084698
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,8 +419,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000019307, y: -80}
-  m_SizeDelta: {x: 1324.5874, y: 543.3423}
+  m_AnchoredPosition: {x: -0.0000076294, y: -141}
+  m_SizeDelta: {x: 933.3374, y: 304.1757}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &871084700
 MonoBehaviour:
@@ -754,7 +767,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 2a1485fb76531734383f09fd94fdfa76, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 796bcb2c074df594fa4e0ae49c434d20, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -773,8 +786,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1861860598}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0161, y: 0, z: 0}
-  m_LocalScale: {x: 0.68200225, y: 0.69238514, z: 1}
+  m_LocalPosition: {x: 0.0618, y: -0.0023, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2138005506}
   m_RootOrder: 1
@@ -838,8 +851,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: The Last Era
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c07b6bc6747b0a241a5b840907a0ecf6, type: 2}
-  m_sharedMaterial: {fileID: -2854890195563445131, guid: c07b6bc6747b0a241a5b840907a0ecf6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 147a44e9571af444e8450d824f37cff1, type: 2}
+  m_sharedMaterial: {fileID: -4720193401988351634, guid: 147a44e9571af444e8450d824f37cff1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -850,8 +863,8 @@ MonoBehaviour:
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
+    topLeft: {r: 0, g: 0.5321255, b: 1, a: 1}
+    topRight: {r: 1, g: 0, b: 0.88550186, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
@@ -869,7 +882,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535

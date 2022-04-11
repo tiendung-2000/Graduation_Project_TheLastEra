@@ -19,9 +19,9 @@ public class Player : MonoBehaviour
     [Header("=====Player Information=====")]
     [Space(15)]
     public float movementSpeed = 4f;
-    public float playerHealth;
+    public float currentHealth;
     public float maxHealthP;
-    public float playerMana;
+    public float currentMana;
     public float maxManaP;
     public float playerDamage;
     public int currentWeaponIndex;
@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
     public float coutDownTimeSetting = 0.25f;
 
     public bool attack;
+    private bool isSetUp;
 
     UI_BarManager barManager;
     UI_BarController healthBarController;
@@ -41,23 +42,31 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         animatorPlayer = GetComponent<Animator>();
+        Debug.Log("Player");
+        myBody = GetComponent<Rigidbody2D>();      
     }
-
-    private void Start()
+    private IEnumerator Start()
     {
-        myBody = GetComponent<Rigidbody2D>();
-        barManager = UI_BarManager.instance;
-
-        healthBarController = barManager.GetBarController(BarName.P_HealthBar);
-        manaBarController = barManager.GetBarController(BarName.P_ManaBar);
-
-        healthBarController.OnInit(playerHealth, maxHealthP);
-        manaBarController.OnInit(playerMana, maxManaP);
+        yield return new WaitForSeconds(0.01f);
+        //barManager = UI_BarManager.instance;
+        healthBarController = UI_BarManager.instance.GetBarController(BarName.P_HealthBar);
+        manaBarController = UI_BarManager.instance.GetBarController(BarName.P_ManaBar);
+        if (healthBarController != null)
+        {
+            Debug.Log("healthBarController: " + healthBarController);
+            isSetUp = true;
+        }          
+        if (GameController.Instance != null)
+        {
+            GameController.Instance.playerCurrentHealth = this.currentHealth;
+            GameController.Instance.maxHealthP = this.maxHealthP;
+            GameController.Instance.playerCurrentMana = this.currentMana;
+            GameController.Instance.maxManaP = this.maxManaP;
+        }
     }
-
     private void Update()
     {
-        if(playerHealth > 0)
+        if(currentHealth > 0)
         {
             Attack();
             if (Input.GetKeyDown(KeyCode.Q))
@@ -65,15 +74,28 @@ public class Player : MonoBehaviour
                 switchWeapon();
             }
         }
+        if (currentHealth <= 0)
+        {
+            animatorPlayer.SetBool("PlayerDead", true);
+            UI_Manager.instance.GetUI_Canvas(UIName.UIGameOver).OnOpen();
+        }
+        if (isSetUp)
+        {
+            Debug.Log("Is set up");
+            healthBarController.OnInit(currentHealth, maxHealthP);
+            manaBarController.OnInit(currentMana, maxManaP);
+        }
     }
-
+  
+      
+  
     // Update is called once per frame
     private void FixedUpdate()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        if(playerHealth > 0)
+        if(currentHealth > 0)
         {
             if (movement != Vector2.zero)
             {
@@ -90,13 +112,9 @@ public class Player : MonoBehaviour
             Flip();
         }
 
-        if(playerHealth <= 0)
-        {
-            animatorPlayer.SetBool("PlayerDead", true);
-            UI_Manager.instance.GetUI_Canvas(UIName.UIGameOver).OnOpen();
-        }
+       
     }
-
+    
     void Flip() {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
@@ -115,21 +133,21 @@ public class Player : MonoBehaviour
         {
             animatorPlayer.SetTrigger("Attack");
             coutDownTime = coutDownTimeSetting;
-            attack = true;
+            attack = true;      
             StartCoroutine(ResetAttack());
         }
     }
 
     public void TakeDamage(float enemieDamage)
     {
-        playerHealth -= enemieDamage;
+        currentHealth -= enemieDamage;
         healthBarController.OnChangeValue(-enemieDamage);
         animatorPlayer.SetTrigger("Hit");
     }
 
     public void ManaChange(float manaChange)
     {
-        playerMana -= manaChange;
+        currentMana -= manaChange;
         manaBarController.OnChangeValue(-manaChange);
     }
 

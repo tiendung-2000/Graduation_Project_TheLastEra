@@ -9,7 +9,6 @@ public class EnemyAI : MonoBehaviour
 
     Path path;
     Seeker seeker;
-
     Rigidbody2D myBody;
     int currentWayPoint;
 
@@ -76,14 +75,14 @@ public class EnemyAI : MonoBehaviour
     }
 
     void Movement() {
-        Vector2 direction = ((Vector2)path.vectorPath[currentWayPoint] - myBody.position).normalized;
+            Vector2 direction = ((Vector2)path.vectorPath[currentWayPoint] - myBody.position).normalized;
 
-        myBody.MovePosition(myBody.position + direction * speed * Time.deltaTime);
+            myBody.MovePosition(myBody.position + direction * speed * Time.deltaTime);
 
-        float distance = Vector2.Distance(myBody.position, path.vectorPath[currentWayPoint]);
+            float distance = Vector2.Distance(myBody.position, path.vectorPath[currentWayPoint]);
 
-        if (distance < distanceToNextPoint)
-            currentWayPoint++;
+            if (distance < distanceToNextPoint)
+                currentWayPoint++;      
     }
 
     private void FixedUpdate()

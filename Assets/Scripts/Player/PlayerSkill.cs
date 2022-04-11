@@ -34,7 +34,7 @@ public class PlayerSkill : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && currentCoolDown[0] <= 0)
         {
-            if(player.playerMana >= 5)
+            if(player.currentMana >= 5)
             {
                 player.ManaChange(manaCost[0]);
                 ShurikenSkill();
@@ -43,7 +43,7 @@ public class PlayerSkill : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R) && currentCoolDown[1] <= 0)
         {
-            if (player.playerMana >= 25)
+            if (player.currentMana >= 25)
             {
                 player.ManaChange(manaCost[0]);
                 ShurikenSkill();

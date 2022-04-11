@@ -11,19 +11,18 @@ public class UI_BarController : MonoBehaviour
     public float max_Value;
     public Image fillBar;
     public BarName barName;
-    UI_BarManager ui_BarManager;
 
     public virtual void Start()
     {
-        ui_BarManager = UI_BarManager.instance;
+        Debug.Log("UI_BarController");  
         OnInit(1, 1);
-        ui_BarManager.AddBarController(this);
+        UI_BarManager.instance.AddBarController(this);
     }
+
     public virtual void OnInit( float _currentValue, float _maxValue)
     {
         current_Value = _currentValue;
         max_Value = _maxValue;
-        OnChangeValue(0);
     }
     public virtual void OnOpen()
     {
@@ -43,3 +42,8 @@ public class UI_BarController : MonoBehaviour
         fillBar.fillAmount = current_Value / max_Value;
     }
 }
+public interface InitInterface
+{
+    public void OnInit();
+}
+

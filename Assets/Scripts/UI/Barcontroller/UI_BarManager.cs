@@ -10,8 +10,14 @@ public class UI_BarManager : MonoBehaviour
     private void Awake()
     {
         if (instance != null)
-            Destroy(gameObject);
-        else instance = this;
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            instance = this;
+            
+        }
     }
 
     public void AddBarController(UI_BarController controller)
