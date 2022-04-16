@@ -390,12 +390,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bossBullet: {fileID: 354254811777562553, guid: 01b230087b90af145986abc682e2af86, type: 3}
   bossShotPoint: {fileID: 9212088069641321735}
+  bulletSkill2: {fileID: 6954586880181985558, guid: 7a13391abcc37e54086011419549c253, type: 3}
+  deathEffect: {fileID: 5605659234586393193, guid: f08b10ed379001d408ad562e8427a561, type: 3}
   listShotPoint:
   - {fileID: 9212088069245591509}
   - {fileID: 9212088069641321732}
   - {fileID: 9212088069931114603}
   - {fileID: 9212088069407232748}
-  bulletSkill2: {fileID: 6954586880181985558, guid: 7a13391abcc37e54086011419549c253, type: 3}
   skillCD:
   - 0
   - 0

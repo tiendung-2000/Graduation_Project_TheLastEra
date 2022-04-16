@@ -76,18 +76,4 @@ public class UI_Manager : MonoBehaviour
             GetUI_Canvas(UIName.UIPlayer).OnClose();
         }
     }
-
-
-    //public void OnChangeAllUIToMenu() {
-        
-    //}
-
-    //public void OnChangeAllUIToTown() {
-        
-    //}
-
-    //public void OnChangeAllUIToGamePlay() { 
-    
-    //}
-
 }

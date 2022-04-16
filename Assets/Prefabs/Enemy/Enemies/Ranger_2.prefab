@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 4233992027759710780}
   m_Layer: 11
   m_Name: Ranger_2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,7 +106,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.9375, y: 1.625}
+    oldSize: {x: 0.96875, y: 0.8125}
     newSize: {x: 0.31, y: 0.26}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -209,6 +209,7 @@ MonoBehaviour:
   timeCoolDownSetting: 2
   bulletShot: {fileID: 4016110930929009126, guid: 27d0ae3e773deb74d9d9fb0685615b1a, type: 3}
   bulletParent: {fileID: 4233992028554755279}
+  deathEffect: {fileID: 7183568902712729893, guid: 99f3a1dfd40529840b79d2c6059baf04, type: 3}
 --- !u!95 &4233992027759710780
 Animator:
   serializedVersion: 3

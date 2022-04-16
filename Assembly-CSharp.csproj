@@ -55,55 +55,57 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Manager\ScenesManager.cs" />
     <Compile Include="Assets\Scripts\Player\RangerWeapon.cs" />
-    <Compile Include="Assets\Scripts\UI\Item\HeathItem.cs" />
-    <Compile Include="Assets\Scripts\UI\PickUp.cs" />
     <Compile Include="Assets\Scripts\Enemies\BulletEnemy.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerSkill.cs" />
-    <Compile Include="Assets\Scripts\UI\SlotObj\SlotStore.cs" />
     <Compile Include="Assets\Scripts\UI\SlotEquipment\SlotEquidment.cs" />
-    <Compile Include="Assets\Scripts\UI\UI_Canvas\UI_GameOverCanvas.cs" />
     <Compile Include="Assets\Scripts\UI\Item\Item.cs" />
     <Compile Include="Assets\Scripts\NPC\NPC_Store.cs" />
-    <Compile Include="Assets\Scripts\Dialouge\Collidable.cs" />
-    <Compile Include="Assets\Scripts\Manager\BagManager.cs" />
     <Compile Include="Assets\Scripts\Object\Bullet.cs" />
-    <Compile Include="Assets\Scripts\UI\Barcontroller\UI_BarManager.cs" />
-    <Compile Include="Assets\Scripts\UI\Barcontroller\UI_BarController.cs" />
-    <Compile Include="Assets\Scripts\Bosses\BossSkill2.cs" />
-    <Compile Include="Assets\Scripts\UI\Store\TabButton.cs" />
     <Compile Include="Assets\Scripts\UI\Store\StorePage.cs" />
-    <Compile Include="Assets\Scripts\Object\DontDestroyThis.cs" />
     <Compile Include="Assets\Scripts\EnemyZone\EnemyZone.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\UI\Item\ManaItem.cs" />
     <Compile Include="Assets\EquidmentManager.cs" />
     <Compile Include="Assets\Scripts\UI\Barcontroller\UI_Health_Enemy_Bar.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyAI.cs" />
-    <Compile Include="Assets\Scripts\Bosses\TheSecondBoss.cs" />
-    <Compile Include="Assets\Scripts\Object\CameraMotor.cs" />
-    <Compile Include="Assets\Scripts\Bosses\TheFirstBoss.cs" />
     <Compile Include="Assets\Scripts\Enemies\MeleeEnemy.cs" />
-    <Compile Include="Assets\Scripts\Manager\BudgetManager.cs" />
     <Compile Include="Assets\Scripts\UI\SlotObj\SlotUI.cs" />
-    <Compile Include="Assets\UI_MenuOptions.cs" />
     <Compile Include="Assets\Scripts\Enemies\RangerEnemy.cs" />
     <Compile Include="Assets\Scripts\UI\UI_Canvas\UI_Canvas.cs" />
     <Compile Include="Assets\Scripts\Player\Shooting.cs" />
+    <Compile Include="Assets\Scripts\UI\Store\TabGroup.cs" />
+    <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Bosses\FinalBoss.cs" />
+    <Compile Include="Assets\Scripts\UI\Item\HeathItem.cs" />
+    <Compile Include="Assets\Scripts\UI\PickUp.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerSkill.cs" />
+    <Compile Include="Assets\Scripts\UI\SlotObj\SlotStore.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_Canvas\UI_GameOverCanvas.cs" />
+    <Compile Include="Assets\Scripts\Dialouge\Collidable.cs" />
+    <Compile Include="Assets\Scripts\Manager\BagManager.cs" />
+    <Compile Include="Assets\Scripts\UI\Barcontroller\UI_BarManager.cs" />
+    <Compile Include="Assets\Scripts\UI\Barcontroller\UI_BarController.cs" />
+    <Compile Include="Assets\Scripts\Bosses\BossSkill2.cs" />
+    <Compile Include="Assets\Scripts\UI\Store\TabButton.cs" />
+    <Compile Include="Assets\Scripts\Object\DontDestroyThis.cs" />
+    <Compile Include="Assets\Scripts\Bosses\TheSecondBoss.cs" />
+    <Compile Include="Assets\Scripts\Object\CameraMotor.cs" />
+    <Compile Include="Assets\WaveSpawnner.cs" />
+    <Compile Include="Assets\Scripts\Bosses\TheFirstBoss.cs" />
+    <Compile Include="Assets\Scripts\Manager\BudgetManager.cs" />
+    <Compile Include="Assets\UI_MenuOptions.cs" />
     <Compile Include="Assets\Scripts\Dialouge\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\UI\UI_Manager.cs" />
     <Compile Include="Assets\Scripts\UI\MenuUI\ClickButton.cs" />
     <Compile Include="Assets\Scripts\UI\SlotObj\SlotBag.cs" />
     <Compile Include="Assets\Scripts\Dialouge\Dialogue.cs" />
     <Compile Include="Assets\Scripts\Object\Chest.cs" />
-    <Compile Include="Assets\Scripts\ItemUsed.cs" />
+    <Compile Include="Assets\Scripts\UI\Item\ItemUsed.cs" />
     <Compile Include="Assets\Scripts\Object\Gate.cs" />
-    <Compile Include="Assets\Scripts\UI\Store\TabGroup.cs" />
     <Compile Include="Assets\Scripts\UI\Barcontroller\UI_Health_Player_Bar.cs" />
-    <Compile Include="Assets\Scripts\Player\Player.cs" />
-    <Compile Include="Assets\Scripts\Bosses\FinalBoss.cs" />
     <Compile Include="Assets\Scripts\NPC\NPCStory.cs" />
     <Compile Include="Assets\Scripts\Player\Skill.cs" />
-    <Compile Include="Assets\WaveSpawnner.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_Upgrade.cs" />
+    <Compile Include="Assets\Scripts\ItemDrop\ItemDropPrefabContainer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -702,9 +704,6 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>C:\Unity\2020.3.26f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.Animation.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.InternalAPIEngineBridge.001">
       <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
     </Reference>
@@ -714,11 +713,20 @@
     <Reference Include="Unity.2D.PixelPerfect">
       <HintPath>Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Animation.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="PsdPlugin">
       <HintPath>Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Tilemap.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
@@ -732,6 +740,9 @@
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Searcher.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.2D.IK.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
     </Reference>
@@ -744,8 +755,8 @@
     <Reference Include="Unity.2D.Path.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Path.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.InternalAPIEditorBridge.001">
-      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
@@ -756,14 +767,26 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEditorBridge.001">
+      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
       <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.IK.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ShaderGraph.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Triangle.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
@@ -773,6 +796,12 @@
     </Reference>
     <Reference Include="Unity.2D.PixelPerfect.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
@@ -789,44 +818,25 @@
     <Reference Include="Unity.2D.Common.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.SpriteShape.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Searcher.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ShaderGraph.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+    <Reference Include="Unity.2D.SpriteShape.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Unity.2D.Tilemap.Extras.csproj">
+      <Project>{CD4584B2-835F-6281-9717-CD274C4403C1}</Project>
+      <Name>Unity.2D.Tilemap.Extras</Name>
+    </ProjectReference>
     <ProjectReference Include="PackageToolsEditor.csproj">
       <Project>{DC5C40F9-B130-6485-DFDA-77A08FA6B082}</Project>
       <Name>PackageToolsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Tilemap.Extras.Editor.csproj">
+      <Project>{010004EC-CE4E-9584-5498-DA64AFB09071}</Project>
+      <Name>Unity.2D.Tilemap.Extras.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="AstarPathfindingProject.csproj">
       <Project>{E735045C-E4C7-7430-BF12-39061258000C}</Project>

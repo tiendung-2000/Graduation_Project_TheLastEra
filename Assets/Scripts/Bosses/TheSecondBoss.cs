@@ -9,6 +9,7 @@ public class TheSecondBoss : MonoBehaviour
     private Bullet bullet;
     public GameObject bossBullet;
     public GameObject bossShotPoint;
+    public GameObject deathEffect;
     public List<Transform> listShotPoint;
 
     public GameObject bulletSkill2;
@@ -81,7 +82,8 @@ public class TheSecondBoss : MonoBehaviour
         if (bossHealth <= 0)
         {
             bossAni.SetBool("BossDead", true);
-            Destroy(gameObject, 10f);
+            Destroy(gameObject, 0.5f);
+            DeathEffect();
         }
     }
 
@@ -137,5 +139,14 @@ public class TheSecondBoss : MonoBehaviour
             bossHealth = 0;
 
         healthBarController.OnChangeValue(-value);
+    }
+
+    private void DeathEffect()
+    {
+        if (deathEffect != null)
+        {
+            GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Destroy(effect, 1f);
+        }
     }
 }

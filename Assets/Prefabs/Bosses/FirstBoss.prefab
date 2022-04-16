@@ -315,6 +315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bossBullet: {fileID: 2474563456486306131, guid: 98e99b2b98ce8064cb76214cb126d4b6, type: 3}
   bossShotPoint: {fileID: 7130191095034906967}
+  deathEffect: {fileID: 598448547400678221, guid: f08670e96f4c48f448b0764b1c8eeff4, type: 3}
   listShotPoint:
   - {fileID: 7130191095752871844}
   - {fileID: 7130191095034906964}

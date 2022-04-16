@@ -15,6 +15,7 @@ public class RangerEnemy : MonoBehaviour
     public float timeCoolDownSetting; 
     public GameObject bulletShot;
     public GameObject bulletParent;
+    public GameObject deathEffect;
 
     EnemyAI enemyAI;
 
@@ -65,7 +66,8 @@ public class RangerEnemy : MonoBehaviour
         if (heathPoint <= 0)
         {
             myAni.SetBool("Dead", true);
-            Destroy(gameObject, 1f);
+            Destroy(gameObject);
+            DeathEffect();
         }
 
         //if (!PlayerSkill.instance.enemieStopMove)
@@ -85,4 +87,17 @@ public class RangerEnemy : MonoBehaviour
         }
         else timeCoolDown -= Time.deltaTime;
     }
+
+    private void DeathEffect()
+    {
+        if(deathEffect != null)
+        {
+            GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Destroy(effect, 1f);
+        }
+        Debug.Log(ItemDropPrefabContainer.Instance == null);
+        ItemDropPrefabContainer.Instance.DropItem(transform.position);
+        UI_BarManager.instance.AddCoin(10);
+    }
+
 }

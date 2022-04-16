@@ -1,0 +1,2 @@
+C:\Unity\My_Project_Game2D\obj\Debug\PackageToolsEditor.csproj.AssemblyReference.cache
+C:\Unity\My_Project_Game2D\obj\Debug\PackageToolsEditor.csproj.CoreCompileInputs.cache

@@ -1,0 +1,2 @@
+C:\Unity\My_Project_Game2D\obj\Debug\AstarPathfindingProjectEditor.csproj.AssemblyReference.cache
+C:\Unity\My_Project_Game2D\obj\Debug\AstarPathfindingProjectEditor.csproj.CoreCompileInputs.cache

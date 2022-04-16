@@ -5,6 +5,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstarPathfindingProject", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{07191B5E-6975-A2AC-362A-B28B39792599}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Tilemap.Extras", "Unity.2D.Tilemap.Extras.csproj", "{CD4584B2-835F-6281-9717-CD274C4403C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Tilemap.Extras.Editor", "Unity.2D.Tilemap.Extras.Editor.csproj", "{010004EC-CE4E-9584-5498-DA64AFB09071}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstarPathfindingProjectEditor", "AstarPathfindingProjectEditor.csproj", "{D9F2DB43-9DC8-7275-5990-679C3B045F7A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackageToolsEditor", "PackageToolsEditor.csproj", "{DC5C40F9-B130-6485-DFDA-77A08FA6B082}"
@@ -23,6 +27,14 @@ Global
 		{07191B5E-6975-A2AC-362A-B28B39792599}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07191B5E-6975-A2AC-362A-B28B39792599}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07191B5E-6975-A2AC-362A-B28B39792599}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD4584B2-835F-6281-9717-CD274C4403C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD4584B2-835F-6281-9717-CD274C4403C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD4584B2-835F-6281-9717-CD274C4403C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD4584B2-835F-6281-9717-CD274C4403C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{010004EC-CE4E-9584-5498-DA64AFB09071}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{010004EC-CE4E-9584-5498-DA64AFB09071}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{010004EC-CE4E-9584-5498-DA64AFB09071}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{010004EC-CE4E-9584-5498-DA64AFB09071}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D9F2DB43-9DC8-7275-5990-679C3B045F7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D9F2DB43-9DC8-7275-5990-679C3B045F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9F2DB43-9DC8-7275-5990-679C3B045F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU

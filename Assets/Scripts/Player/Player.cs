@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Player : MonoBehaviour 
+public class Player : MonoBehaviour
 {
-    [Header ("=====List Weapon=====")]
+    [Header("=====List Weapon=====")]
     [Space(15)]
     public List<GameObject> listWeapon;
 
@@ -25,13 +25,14 @@ public class Player : MonoBehaviour
     public float maxManaP;
     public float playerDamage;
     public int currentWeaponIndex;
+    public int coin;
 
 
     public float coutDownTime;
     public float coutDownTimeSetting = 0.25f;
 
     public bool attack;
-    private bool isSetUp;
+    private bool isSetUp = false;
 
     UI_BarManager barManager;
     UI_BarController healthBarController;
@@ -43,30 +44,32 @@ public class Player : MonoBehaviour
     {
         animatorPlayer = GetComponent<Animator>();
         Debug.Log("Player");
-        myBody = GetComponent<Rigidbody2D>();      
+        myBody = GetComponent<Rigidbody2D>();
     }
     private IEnumerator Start()
     {
-        yield return new WaitForSeconds(0.01f);
-        //barManager = UI_BarManager.instance;
-        healthBarController = UI_BarManager.instance.GetBarController(BarName.P_HealthBar);
-        manaBarController = UI_BarManager.instance.GetBarController(BarName.P_ManaBar);
-        if (healthBarController != null)
-        {
-            Debug.Log("healthBarController: " + healthBarController);
-            isSetUp = true;
-        }          
+        yield return null;
         if (GameController.Instance != null)
         {
-            GameController.Instance.playerCurrentHealth = this.currentHealth;
-            GameController.Instance.maxHealthP = this.maxHealthP;
-            GameController.Instance.playerCurrentMana = this.currentMana;
-            GameController.Instance.maxManaP = this.maxManaP;
+            this.currentHealth = GameController.Instance.playerCurrentHealth;
+            this.maxHealthP = GameController.Instance.maxHealthP;
+            this.currentMana = GameController.Instance.playerCurrentMana;
+            this.maxManaP = GameController.Instance.maxManaP;
+            this.coin = GameController.Instance.playerCoin;
+        }//barManager = UI_BarManager.instance;
+        healthBarController = UI_BarManager.instance.GetBarController(BarName.P_HealthBar);
+        manaBarController = UI_BarManager.instance.GetBarController(BarName.P_ManaBar);
+        if (healthBarController != null && manaBarController !=null)
+        {
+            Debug.Log("healthBarController: " + healthBarController);
+            Debug.Log("manaBarController: " + manaBarController);
+            isSetUp = true;
         }
+
     }
     private void Update()
     {
-        if(currentHealth > 0)
+        if (currentHealth > 0)
         {
             Attack();
             if (Input.GetKeyDown(KeyCode.Q))
@@ -81,29 +84,32 @@ public class Player : MonoBehaviour
         }
         if (isSetUp)
         {
-            Debug.Log("Is set up");
             healthBarController.OnInit(currentHealth, maxHealthP);
             manaBarController.OnInit(currentMana, maxManaP);
+            
+            UI_BarManager.instance.UpdateCoin();
+            isSetUp = false;
         }
     }
-  
-      
-  
+
+
+
     // Update is called once per frame
     private void FixedUpdate()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        if(currentHealth > 0)
+        if (currentHealth > 0)
         {
             if (movement != Vector2.zero)
             {
                 myBody.MovePosition(myBody.position + movement * movementSpeed * Time.deltaTime);
-            
+
                 animatorPlayer.SetBool("Running", true);
             }
-            else {
+            else
+            {
                 animatorPlayer.SetBool("Running", false);
             }
             if (coutDownTime > 0f)
@@ -111,14 +117,13 @@ public class Player : MonoBehaviour
 
             Flip();
         }
-
-       
     }
-    
-    void Flip() {
+
+    void Flip()
+    {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        if ((mousePos.x > transform.position.x && transform.localScale.x < 0) || 
+        if ((mousePos.x > transform.position.x && transform.localScale.x < 0) ||
             (mousePos.x < transform.position.x && transform.localScale.x > 0))
         {
             Vector3 scaleTemp = transform.localScale;
@@ -133,16 +138,17 @@ public class Player : MonoBehaviour
         {
             animatorPlayer.SetTrigger("Attack");
             coutDownTime = coutDownTimeSetting;
-            attack = true;      
+            attack = true;
             StartCoroutine(ResetAttack());
         }
     }
 
-    public void TakeDamage(float enemieDamage)
+    public void TakeDamage(float enemieDamage, bool heal = false)
     {
         currentHealth -= enemieDamage;
         healthBarController.OnChangeValue(-enemieDamage);
-        animatorPlayer.SetTrigger("Hit");
+        if (!heal)
+            animatorPlayer.SetTrigger("Hit");
     }
 
     public void ManaChange(float manaChange)
@@ -166,17 +172,17 @@ public class Player : MonoBehaviour
             Destroy(collision.gameObject);
             animatorPlayer.SetTrigger("Hit");
         }
-
     }
 
-    IEnumerator ResetAttack() {
+    IEnumerator ResetAttack()
+    {
         yield return new WaitForSeconds(coutDownTimeSetting);
         attack = false;
     }
 
     void switchWeapon()
     {
-        if(currentWeaponIndex + 1 < listWeapon.Count)
+        if (currentWeaponIndex + 1 < listWeapon.Count)
         {
             listWeapon[currentWeaponIndex].SetActive(false);
             currentWeaponIndex++;
@@ -188,5 +194,10 @@ public class Player : MonoBehaviour
             currentWeaponIndex = 0;
             listWeapon[currentWeaponIndex].SetActive(true);
         }
+    }
+    public void OnReInitHPMana()
+    {
+        healthBarController.OnInit(currentHealth, maxHealthP);
+        manaBarController.OnInit(currentMana, maxManaP);
     }
 }

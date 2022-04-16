@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +12,7 @@ public class UI_BarController : MonoBehaviour
     public float max_Value;
     public Image fillBar;
     public BarName barName;
+    public TextMeshProUGUI txtValue;
 
     public virtual void Start()
     {
@@ -23,6 +25,7 @@ public class UI_BarController : MonoBehaviour
     {
         current_Value = _currentValue;
         max_Value = _maxValue;
+        OnChangeValue(0);
     }
     public virtual void OnOpen()
     {
@@ -35,11 +38,11 @@ public class UI_BarController : MonoBehaviour
     public virtual void OnChangeValue(float valueChange)
     {
         current_Value += valueChange;
-        if (current_Value > max_Value)
-            current_Value = max_Value;
+       
         if (current_Value <= 0f)
             fillBar.fillAmount = 0;
         fillBar.fillAmount = current_Value / max_Value;
+        txtValue.text = string.Format("{0}/{1}", current_Value, max_Value);
     }
 }
 public interface InitInterface

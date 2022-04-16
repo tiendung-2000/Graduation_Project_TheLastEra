@@ -9,20 +9,19 @@ public class FinalBoss : MonoBehaviour
     private Bullet bullet;
     public GameObject bossBullet;
     public GameObject bossShotPoint;
-    public List<Transform> listShotPoint;
-
     public GameObject bulletSkill2;
+    public GameObject deathEffect;
+
+    public List<Transform> listShotPoint;
     public List<float> skillCD;
     public List<float> skillCDSetting;
-
-
-    EnemyAI bossAI;
 
     public float bossHealth;
     public float maxHealth;
     public float bossDamage;
     public float bossShotingRange;
 
+    EnemyAI bossAI;
     UI_BarManager barManager;
     UI_BarController healthBarController;
 
@@ -81,7 +80,8 @@ public class FinalBoss : MonoBehaviour
         if (bossHealth <= 0)
         {
             bossAni.SetBool("BossDead", true);
-            Destroy(gameObject, 10f);
+            Destroy(gameObject, 0.5f);
+            DeathEffect();
         }
     }
 
@@ -137,5 +137,14 @@ public class FinalBoss : MonoBehaviour
             bossHealth = 0;
 
         healthBarController.OnChangeValue(-value);
+    }
+
+    private void DeathEffect()
+    {
+        if (deathEffect != null)
+        {
+            GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Destroy(effect, 1f);
+        }
     }
 }

@@ -53,33 +53,33 @@
     <UnityVersion>2020.3.26f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Packages\com.unity.2d.tilemap.extras\Editor\Brushes\CoordinateBrush\CoordinateBrush.cs" />
-    <Compile Include="Packages\com.unity.2d.tilemap.extras\Editor\Tiles\RuleOverrideTile\PopulateRuleOverrideTileWizard.cs" />
-    <Compile Include="Packages\com.unity.2d.tilemap.extras\Editor\Brushes\PrefabBrushes\PrefabRandomBrush\PrefabRandomBrush.cs" />
-    <Compile Include="Packages\com.unity.2d.tilemap.extras\Editor\Brushes\PrefabBrushes\BasePrefabBrush.cs" />
-    <Compile Include="Packages\com.unity.2d.tilemap.extras\Editor\Brushes\RandomBrush\RandomBrush.cs" />
-    <Compile Include="Packages\com.unity.2d.tilemap.extras\Editor\Brushes\GameObjectBrush\GameObjectBrush.cs" />
-    <Compile Include="Packages\com.unity.2d.tilemap.extras\Editor\Brushes\GroupBrush\GroupBrush.cs" />
-    <Compile Include="Packages\com.unity.2d.tilemap.extras\Editor\Menu\CustomRuleTileMenu.cs" />
-    <Compile Include="Packages\com.unity.2d.tilemap.extras\Editor\Brushes\TintBrushSmooth\TintTextureGeneratorEditor.cs" />
-    <Compile Include="Packages\com.unity.2d.tilemap.extras\Editor\Brushes\TintBrushSmooth\TintBrushSmooth.cs" />
-    <Compile Include="Packages\com.unity.2d.tilemap.extras\Editor\Tiles\RuleTile\RuleTileEditor.cs" />
-    <Compile Include="Packages\com.unity.2d.tilemap.extras\Editor\Tiles\HexagonalRuleTile\HexagonalRuleTileEditor.cs" />
-    <Compile Include="Packages\com.unity.2d.tilemap.extras\Editor\Brushes\PrefabBrushes\PrefabBrush\PrefabBrush.cs" />
-    <Compile Include="Packages\com.unity.2d.tilemap.extras\Editor\Tiles\RuleOverrideTile\RuleOverrideTileEditor.cs" />
-    <Compile Include="Packages\com.unity.2d.tilemap.extras\Editor\Menu\MenuItemOrder.cs" />
-    <Compile Include="Packages\com.unity.2d.tilemap.extras\Editor\Brushes\PrefabBrushes\BrushMenuItem.cs" />
-    <Compile Include="Packages\com.unity.2d.tilemap.extras\Editor\Brushes\TintBrush\TintBrush.cs" />
-    <Compile Include="Packages\com.unity.2d.tilemap.extras\Editor\Tiles\RuleOverrideTile\AdvancedRuleOverrideTileEditor.cs" />
-    <Compile Include="Packages\com.unity.2d.tilemap.extras\Editor\Tiles\Menu\TerrainTileMenu.cs" />
-    <Compile Include="Packages\com.unity.2d.tilemap.extras\Editor\Brushes\LineBrush\LineBrush.cs" />
-    <Compile Include="Packages\com.unity.2d.tilemap.extras\Editor\Tiles\Menu\RandomTileMenu.cs" />
-    <Compile Include="Packages\com.unity.2d.tilemap.extras\Editor\Tiles\Menu\PipelineTileMenu.cs" />
-    <Compile Include="Packages\com.unity.2d.tilemap.extras\Editor\Tiles\IsometricRuleTile\IsometricRuleTileEditor.cs" />
-    <Compile Include="Packages\com.unity.2d.tilemap.extras\Editor\Tiles\Menu\WeightedRandomTileMenu.cs" />
+    <Compile Include="E:\2d-extras\Editor\Brushes\CoordinateBrush\CoordinateBrush.cs" />
+    <Compile Include="E:\2d-extras\Editor\Tiles\RuleOverrideTile\PopulateRuleOverrideTileWizard.cs" />
+    <Compile Include="E:\2d-extras\Editor\Brushes\PrefabBrushes\PrefabRandomBrush\PrefabRandomBrush.cs" />
+    <Compile Include="E:\2d-extras\Editor\Brushes\PrefabBrushes\BasePrefabBrush.cs" />
+    <Compile Include="E:\2d-extras\Editor\Brushes\RandomBrush\RandomBrush.cs" />
+    <Compile Include="E:\2d-extras\Editor\Brushes\GameObjectBrush\GameObjectBrush.cs" />
+    <Compile Include="E:\2d-extras\Editor\Brushes\GroupBrush\GroupBrush.cs" />
+    <Compile Include="E:\2d-extras\Editor\Menu\CustomRuleTileMenu.cs" />
+    <Compile Include="E:\2d-extras\Editor\Brushes\TintBrushSmooth\TintTextureGeneratorEditor.cs" />
+    <Compile Include="E:\2d-extras\Editor\Brushes\TintBrushSmooth\TintBrushSmooth.cs" />
+    <Compile Include="E:\2d-extras\Editor\Tiles\RuleTile\RuleTileEditor.cs" />
+    <Compile Include="E:\2d-extras\Editor\Tiles\HexagonalRuleTile\HexagonalRuleTileEditor.cs" />
+    <Compile Include="E:\2d-extras\Editor\Brushes\PrefabBrushes\PrefabBrush\PrefabBrush.cs" />
+    <Compile Include="E:\2d-extras\Editor\Tiles\RuleOverrideTile\RuleOverrideTileEditor.cs" />
+    <Compile Include="E:\2d-extras\Editor\Menu\MenuItemOrder.cs" />
+    <Compile Include="E:\2d-extras\Editor\Brushes\PrefabBrushes\BrushMenuItem.cs" />
+    <Compile Include="E:\2d-extras\Editor\Brushes\TintBrush\TintBrush.cs" />
+    <Compile Include="E:\2d-extras\Editor\Tiles\RuleOverrideTile\AdvancedRuleOverrideTileEditor.cs" />
+    <Compile Include="E:\2d-extras\Editor\Tiles\Menu\TerrainTileMenu.cs" />
+    <Compile Include="E:\2d-extras\Editor\Brushes\LineBrush\LineBrush.cs" />
+    <Compile Include="E:\2d-extras\Editor\Tiles\Menu\RandomTileMenu.cs" />
+    <Compile Include="E:\2d-extras\Editor\Tiles\Menu\PipelineTileMenu.cs" />
+    <Compile Include="E:\2d-extras\Editor\Tiles\IsometricRuleTile\IsometricRuleTileEditor.cs" />
+    <Compile Include="E:\2d-extras\Editor\Tiles\Menu\WeightedRandomTileMenu.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Packages\com.unity.2d.tilemap.extras\Editor\Unity.2D.Tilemap.Extras.Editor.asmdef" />
+    <None Include="E:\2d-extras\Editor\Unity.2D.Tilemap.Extras.Editor.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

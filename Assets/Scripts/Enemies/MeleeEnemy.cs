@@ -5,10 +5,12 @@ using UnityEngine;
 public class MeleeEnemy : MonoBehaviour
 {
     public float heathPoint;
+    public float myDamage;
     private Animator myAni;
     private Player player;
     private Bullet bullet;
-    public float myDamage;
+    public GameObject deathEffect;
+
 
     private void Awake()
     {
@@ -53,12 +55,22 @@ public class MeleeEnemy : MonoBehaviour
         if(heathPoint <= 0)
         {
             myAni.SetBool("Dead",true);
-            Destroy(gameObject,1f);
+            Destroy(gameObject);
+            DeathEffect();
         }
 
-        if (!PlayerSkill.instance.enemieStopMove)
+        //if (!PlayerSkill.instance.enemieStopMove)
+        //{
+        //    //enemie move
+        //}
+    }
+
+    private void DeathEffect()
+    {
+        if (deathEffect != null)
         {
-            //enemie move
+            GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Destroy(effect, 1f);
         }
     }
 }

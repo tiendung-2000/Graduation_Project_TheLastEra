@@ -43,5 +43,7 @@ public class Gate : MonoBehaviour
         gc.maxHealthP = player.maxHealthP;
         gc.playerCurrentMana = player.currentMana;
         gc.maxManaP = player.maxManaP;
+        gc.playerCoin = player.coin;
+        Debug.Log("Save Player Data");
     }
 }

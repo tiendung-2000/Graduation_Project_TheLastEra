@@ -48,7 +48,7 @@ public class SlotEquidment : MonoBehaviour
 
     private void UsedHealthItem(HeathItem healthItem)
     {
-        equidmentController.player.currentHealth += healthItem.health;
+        equidmentController.player.TakeDamage(healthItem.health * -1,true);
         Debug.Log("After "+ equidmentController.player.currentHealth);
     }
     Item GetItemChild(Item item)

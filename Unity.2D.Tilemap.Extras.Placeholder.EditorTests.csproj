@@ -53,10 +53,10 @@
     <UnityVersion>2020.3.26f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Packages\com.unity.2d.tilemap.extras\Tests\Editor\PlaceholderTests.cs" />
+    <Compile Include="Packages\2d-extras-master\Tests\Editor\PlaceholderTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Packages\com.unity.2d.tilemap.extras\Tests\Editor\Unity.2D.Tilemap.Extras.EditorTests.asmdef" />
+    <None Include="Packages\2d-extras-master\Tests\Editor\Unity.2D.Tilemap.Extras.EditorTests.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

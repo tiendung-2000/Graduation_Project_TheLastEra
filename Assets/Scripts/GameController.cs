@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
     public float maxHealthP;
     public float playerCurrentMana;
     public float maxManaP;
+    public int playerCoin;
 
     private static GameController _instance;
     public static GameController Instance
