@@ -10,7 +10,7 @@ public class PickUp : MonoBehaviour
         if (item != null)
         {
             Debug.Log("va cham");
-            EquidmentManager.instance.AddItem(item.item, 1);
+            UI_EquipmentManager.instance.AddItem(item.item, 1);
         }
     }
 }

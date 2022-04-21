@@ -15,4 +15,4 @@ MonoBehaviour:
   icon: {fileID: 5182724834878707414, guid: 187ec26695c1c844e962da8286666a48, type: 3}
   price: 2
   itemType: 1
-  mana: 12
+  mana: 10

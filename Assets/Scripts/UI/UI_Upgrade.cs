@@ -48,11 +48,12 @@ public class UI_Upgrade : MonoBehaviour
     public void OnOpen()
     {
         panel.SetActive(true);
-        UpdateMaxHealth();
-        UpdateMaxMana();
+        UpgradeMaxHealth();
+        UpgradeMaxMana();
+        UpgradeDamage();
     }
 
-    public void UpdateMaxHealth()
+    public void UpgradeMaxHealth()
     {
         var player = FindObjectOfType<Player>();
         txtHealthMax.text = player.maxHealthP.ToString();
@@ -63,12 +64,12 @@ public class UI_Upgrade : MonoBehaviour
         if (player.coin < coinPerUpgrade)
             return;
         player.maxHealthP += maxHealthPerUpgrade;
-        UpdateMaxHealth();
+        UpgradeMaxHealth();
         player.OnReInitHPMana();
         UI_BarManager.instance.AddCoin(coinPerUpgrade * -1);
     }
 
-    public void UpdateMaxMana()
+    public void UpgradeMaxMana()
     {
         var player = FindObjectOfType<Player>();
         txtManaMax.text = player.maxManaP.ToString();
@@ -79,8 +80,23 @@ public class UI_Upgrade : MonoBehaviour
         if (player.coin < coinPerUpgrade)
             return;
         player.maxManaP += maxManaPerUpgrade;
-        UpdateMaxMana();
+        UpgradeMaxMana();
         player.OnReInitHPMana();
+        UI_BarManager.instance.AddCoin(coinPerUpgrade * -1);
+    }
+
+    public void UpgradeDamage()
+    {
+        var player = FindObjectOfType<Player>();
+        txtDamageMax.text = player.playerDamage.ToString();
+    }
+    public void OnUpgradeMaxDamage()
+    {
+        var player = FindObjectOfType<Player>();
+        if (player.coin < coinPerUpgrade)
+            return;
+        player.playerDamage += maxDamagePerUpgrade;
+        UpgradeDamage();
         UI_BarManager.instance.AddCoin(coinPerUpgrade * -1);
     }
 }

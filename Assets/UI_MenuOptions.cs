@@ -10,6 +10,7 @@ public class UI_MenuOptions : UI_Canvas
     public Button openOptions;
     public Button quitGame;
     public Button exitMenuOptions;
+    
     public override void Start()
     {
         base.Start();
@@ -26,9 +27,7 @@ public class UI_MenuOptions : UI_Canvas
     }
     void BackToTown()
     {
-        ScenesManager.instance.ChangeScene(1);
-        //GameController.Instance.playerCurrentHealth = GameController.Instance.maxHealthP;
-        //GameController.Instance.playerCurrentMana = GameController.Instance.maxManaP;       
+        ScenesManager.instance.ChangeScene(1);      
     }
     void GameOptions()
     {
@@ -36,10 +35,10 @@ public class UI_MenuOptions : UI_Canvas
     }
     void QuitGame()
     {
-
+        Application.Quit();
     }
     void ExitMenuOptions()
     {
-
+        gameObject.SetActive(false);
     }
 }

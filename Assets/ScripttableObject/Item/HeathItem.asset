@@ -15,4 +15,4 @@ MonoBehaviour:
   icon: {fileID: -8197995511371906058, guid: 187ec26695c1c844e962da8286666a48, type: 3}
   price: 2
   itemType: 0
-  health: 22
+  health: 20

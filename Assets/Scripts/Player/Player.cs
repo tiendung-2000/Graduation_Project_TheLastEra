@@ -55,8 +55,9 @@ public class Player : MonoBehaviour
             this.maxHealthP = GameController.Instance.maxHealthP;
             this.currentMana = GameController.Instance.playerCurrentMana;
             this.maxManaP = GameController.Instance.maxManaP;
+            this.playerDamage = GameController.Instance.playerCurrentDamage;
             this.coin = GameController.Instance.playerCoin;
-        }//barManager = UI_BarManager.instance;
+        }
         healthBarController = UI_BarManager.instance.GetBarController(BarName.P_HealthBar);
         manaBarController = UI_BarManager.instance.GetBarController(BarName.P_ManaBar);
         if (healthBarController != null && manaBarController !=null)
@@ -143,12 +144,37 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float enemieDamage, bool heal = false)
+    public void TakeDamage(float enemieDamage)
     {
         currentHealth -= enemieDamage;
         healthBarController.OnChangeValue(-enemieDamage);
-        if (!heal)
-            animatorPlayer.SetTrigger("Hit");
+        animatorPlayer.SetTrigger("Hit");
+    }
+
+    public void Healing(float healing, bool heal = false)
+    {
+        if(currentHealth < maxHealthP)
+        {
+            currentHealth += healing;
+            healthBarController.OnChangeValue(healing);
+        }
+        else
+        {
+            currentHealth = maxHealthP;
+        }
+    }
+
+    public void ResMana(float resMana, bool res = false)
+    {
+        if(currentMana < maxManaP)
+        {
+            currentMana += resMana;
+            manaBarController.OnChangeValue(resMana);
+        }
+        else
+        {
+            currentMana = maxManaP;
+        }
     }
 
     public void ManaChange(float manaChange)

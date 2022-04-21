@@ -56,7 +56,7 @@
     <Compile Include="Assets\Scripts\Manager\ScenesManager.cs" />
     <Compile Include="Assets\Scripts\Player\RangerWeapon.cs" />
     <Compile Include="Assets\Scripts\Enemies\BulletEnemy.cs" />
-    <Compile Include="Assets\Scripts\UI\SlotEquipment\SlotEquidment.cs" />
+    <Compile Include="Assets\Scripts\UI\SlotEquipment\SlotEquipment.cs" />
     <Compile Include="Assets\Scripts\UI\Item\Item.cs" />
     <Compile Include="Assets\Scripts\NPC\NPC_Store.cs" />
     <Compile Include="Assets\Scripts\Object\Bullet.cs" />
@@ -64,7 +64,6 @@
     <Compile Include="Assets\Scripts\EnemyZone\EnemyZone.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\UI\Item\ManaItem.cs" />
-    <Compile Include="Assets\EquidmentManager.cs" />
     <Compile Include="Assets\Scripts\UI\Barcontroller\UI_Health_Enemy_Bar.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\Enemies\MeleeEnemy.cs" />
@@ -88,6 +87,7 @@
     <Compile Include="Assets\Scripts\UI\Store\TabButton.cs" />
     <Compile Include="Assets\Scripts\Object\DontDestroyThis.cs" />
     <Compile Include="Assets\Scripts\Bosses\TheSecondBoss.cs" />
+    <Compile Include="Assets\Scripts\ItemDrop\ItemDropPrefabContainer.cs" />
     <Compile Include="Assets\Scripts\Object\CameraMotor.cs" />
     <Compile Include="Assets\WaveSpawnner.cs" />
     <Compile Include="Assets\Scripts\Bosses\TheFirstBoss.cs" />
@@ -101,11 +101,12 @@
     <Compile Include="Assets\Scripts\Object\Chest.cs" />
     <Compile Include="Assets\Scripts\UI\Item\ItemUsed.cs" />
     <Compile Include="Assets\Scripts\Object\Gate.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_Upgrade.cs" />
     <Compile Include="Assets\Scripts\UI\Barcontroller\UI_Health_Player_Bar.cs" />
     <Compile Include="Assets\Scripts\NPC\NPCStory.cs" />
     <Compile Include="Assets\Scripts\Player\Skill.cs" />
-    <Compile Include="Assets\Scripts\UI\UI_Upgrade.cs" />
-    <Compile Include="Assets\Scripts\ItemDrop\ItemDropPrefabContainer.cs" />
+    <Compile Include="Assets\UI_EquipmentManager.cs" />
+    <Compile Include="Assets\UI_SettingsMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

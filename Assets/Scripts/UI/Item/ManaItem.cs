@@ -4,5 +4,5 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "ManaItem", menuName = "Item/ mana item")]
 public class ManaItem : Item
 {
-    public float mana =10f;
+    public float mana = 20f;
 }
