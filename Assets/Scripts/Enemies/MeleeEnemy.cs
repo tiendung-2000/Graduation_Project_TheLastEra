@@ -58,11 +58,6 @@ public class MeleeEnemy : MonoBehaviour
             Destroy(gameObject);
             DeathEffect();
         }
-
-        //if (!PlayerSkill.instance.enemieStopMove)
-        //{
-        //    //enemie move
-        //}
     }
 
     private void DeathEffect()

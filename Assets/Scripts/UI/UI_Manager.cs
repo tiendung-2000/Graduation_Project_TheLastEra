@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum UIName {UIPlayer, UIStore, UIBag, UIGameOver,UIGameOptions}
+public enum UIName {UIPlayer, UIStore, UIBag, UIGameOver, UIGameOptions, UIEnemy}
 
 public class UI_Manager : MonoBehaviour
 {

@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum BarName { E_HealthBar, P_HealthBar, P_ManaBar, P_ShieldBar}
+public enum BarName { E_HealthBar, P_HealthBar, P_ManaBar}
 
 public class UI_BarController : MonoBehaviour
 {

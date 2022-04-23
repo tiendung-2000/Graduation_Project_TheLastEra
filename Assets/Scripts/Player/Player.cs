@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     private Vector2 movement;
     private Animator animatorPlayer;
     private BulletEnemy enemyBulletDamage;
-    private BossSkill2 firstBossSkill;
+    private BossSecondPhrase firstBossSkill;
 
     [Header("=====Player Information=====")]
     [Space(15)]
@@ -37,8 +37,6 @@ public class Player : MonoBehaviour
     UI_BarManager barManager;
     UI_BarController healthBarController;
     UI_BarController manaBarController;
-    //UI_BarController shieldBarController;
-
 
     private void Awake()
     {
@@ -92,8 +90,6 @@ public class Player : MonoBehaviour
             isSetUp = false;
         }
     }
-
-
 
     // Update is called once per frame
     private void FixedUpdate()

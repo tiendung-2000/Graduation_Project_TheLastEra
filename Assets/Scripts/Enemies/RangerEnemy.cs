@@ -12,7 +12,7 @@ public class RangerEnemy : MonoBehaviour
     public float myDamage;
     public float shootingRanger;
     float timeCoolDown;
-    public float timeCoolDownSetting; 
+    public float timeCoolDownSetting;
     public GameObject bulletShot;
     public GameObject bulletParent;
     public GameObject deathEffect;
@@ -25,7 +25,6 @@ public class RangerEnemy : MonoBehaviour
         enemyAI = GetComponent<EnemyAI>();
     }
 
-    //ham duoi chuyen qua may cai dang bullet...de the nay cung khong sao nha
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //--give damage--------
@@ -69,19 +68,13 @@ public class RangerEnemy : MonoBehaviour
             Destroy(gameObject);
             DeathEffect();
         }
-
-        //if (!PlayerSkill.instance.enemieStopMove)
-        //{
-        //    //enemie move
-        //}
     }
 
     void Update()
     {
         if (timeCoolDown <= 0f && enemyAI.canShot)
         {
-            GameObject bulletCreate=
-                Instantiate(bulletShot, bulletParent.transform.position, Quaternion.identity);
+            GameObject bulletCreate = Instantiate(bulletShot, bulletParent.transform.position, Quaternion.identity);
             bulletCreate.GetComponent<BulletEnemy>().myDamage = myDamage;
             timeCoolDown = timeCoolDownSetting;
         }
@@ -90,7 +83,7 @@ public class RangerEnemy : MonoBehaviour
 
     private void DeathEffect()
     {
-        if(deathEffect != null)
+        if (deathEffect != null)
         {
             GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
             Destroy(effect, 1f);

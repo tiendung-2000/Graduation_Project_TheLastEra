@@ -226,7 +226,7 @@ MonoBehaviour:
   myDamage: 10
   shootingRanger: 5
   timeCoolDownSetting: 2
-  bulletShot: {fileID: 2474563456486306131, guid: 98e99b2b98ce8064cb76214cb126d4b6, type: 3}
+  bulletShot: {fileID: 1613668531352317760, guid: c43bea6320520974b96430ac49c6d53d, type: 3}
   bulletParent: {fileID: 4101345367236642203}
   deathEffect: {fileID: 7183568902712729893, guid: 99f3a1dfd40529840b79d2c6059baf04, type: 3}
 --- !u!1 &4101345367236642203

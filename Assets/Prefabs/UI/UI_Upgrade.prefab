@@ -752,7 +752,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3950266837626654216}
         m_TargetAssemblyTypeName: UI_Upgrade, Assembly-CSharp
-        m_MethodName: UpdateMaxMana
+        m_MethodName: OnUpgradeMaxMana
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -883,7 +883,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 430686809719851309}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3950266837626654216}
+        m_TargetAssemblyTypeName: UI_Upgrade, Assembly-CSharp
+        m_MethodName: OnUpgradeMaxDamage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &430686809865744484
 GameObject:
   m_ObjectHideFlags: 0
@@ -1987,7 +1999,7 @@ GameObject:
   - component: {fileID: 6303083147626120914}
   - component: {fileID: 85925036750780934}
   m_Layer: 5
-  m_Name: MaxDamage
+  m_Name: CurrentDamage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2121,7 +2133,7 @@ GameObject:
   - component: {fileID: 2770389540299675158}
   - component: {fileID: 487864160017053568}
   m_Layer: 5
-  m_Name: MaxMana
+  m_Name: CurrentMana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2255,7 +2267,7 @@ GameObject:
   - component: {fileID: 1838132982833223299}
   - component: {fileID: 3088266353932297188}
   m_Layer: 5
-  m_Name: MaxHealth
+  m_Name: CurrentHealth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

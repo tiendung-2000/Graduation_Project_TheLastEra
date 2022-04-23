@@ -9,7 +9,7 @@ public class PickUp : MonoBehaviour
         ItemUsed item = collision.gameObject.GetComponent<ItemUsed>();
         if (item != null)
         {
-            Debug.Log("va cham");
+            Debug.Log("Pickup");
             UI_EquipmentManager.instance.AddItem(item.item, 1);
         }
     }

@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3728601333471358032}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.796, y: -3.733, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0.9473, y: -3.733, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 7f163c38bc015804cbc96ff9b1ce1af3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 36eb87bc32dce1f488733bf43847105a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -123,7 +123,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.40625, y: 0.40625}
+    oldSize: {x: 1.1875, y: 0.5625}
     newSize: {x: 0.13, y: 0.13}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -144,5 +144,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 623a8344700c20c4f9058e3c36a8d561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletDamage: 100
+  bulletDamage: 10
   hitEffect: {fileID: 6615299711181867983, guid: fd432e76196333e4180ca6ad0855180f, type: 3}

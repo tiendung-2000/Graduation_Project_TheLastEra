@@ -810,6 +810,7 @@ MonoBehaviour:
   maxManaP: 100
   playerDamage: 50
   currentWeaponIndex: 0
+  coin: 0
   coutDownTime: 0
   coutDownTimeSetting: 0.4
   attack: 0
@@ -829,8 +830,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2247992186b429545926ce6270273d89, type: 2}
   - {fileID: 11400000, guid: 873ae07c097be414f9bd310e892fddc7, type: 2}
   currentCoolDown:
-  - 0
-  - 0
+  - 5
+  - 30
   manaCost:
   - 5
   - 25

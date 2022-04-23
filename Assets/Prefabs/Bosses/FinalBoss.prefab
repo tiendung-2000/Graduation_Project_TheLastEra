@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9212088069245591508}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.97, z: 0}
+  m_LocalPosition: {x: 0, y: 1.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9212088070026195490}
@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9212088069407232751}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.79, y: 0, z: 0}
+  m_LocalPosition: {x: -1.26, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9212088070026195490}
@@ -84,7 +84,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9212088069641321735}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.88, y: -0.01, z: 0}
+  m_LocalPosition: {x: 1.4, y: -0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9212088070026195490}
@@ -114,7 +114,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9212088069931114602}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.01, z: 0}
+  m_LocalPosition: {x: 0, y: -1.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9212088070026195490}
@@ -194,12 +194,12 @@ GameObject:
   m_Component:
   - component: {fileID: 9212088070735592380}
   - component: {fileID: 9212088070735592383}
+  - component: {fileID: 9212088070735592353}
   - component: {fileID: 9212088070735592382}
   - component: {fileID: 9212088070735592381}
   - component: {fileID: 9212088070735592352}
   - component: {fileID: 9212088070735592355}
   - component: {fileID: 9212088070735592354}
-  - component: {fileID: 9212088070735592353}
   m_Layer: 11
   m_Name: FinalBoss
   m_TagString: Untagged
@@ -274,6 +274,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &9212088070735592353
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9212088070735592377}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 97e720d9796d34648a6ac6def924072e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &9212088070735592382
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -363,16 +382,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {x: 0, y: 0, z: 0}
   distanceToNextPoint: 0.2
-  speed: 5
-  distanceToFollow: 7
-  distanceToStop: 5
+  speed: 1
+  distanceToFollow: 12
+  distanceToStop: 9
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   canShot: 0
   onView: 0
-  onZone: 0
-  playerOnZone: 0
+  onZone: 1
+  playerOnZone: 1
   decision: 0
   timeTMNDSetting: 0
   stage: 0
@@ -388,41 +407,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d629ad7d5e3b234583336a90a1be541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossBullet: {fileID: 354254811777562553, guid: 01b230087b90af145986abc682e2af86, type: 3}
-  bossShotPoint: {fileID: 9212088069641321735}
-  bulletSkill2: {fileID: 6954586880181985558, guid: 7a13391abcc37e54086011419549c253, type: 3}
+  bossBullet: {fileID: 1251305875492357572, guid: 5a5c33465fe2e2246bd6b7e1f573383a, type: 3}
+  bossShootPoint: {fileID: 9212088070583143640}
   deathEffect: {fileID: 5605659234586393193, guid: f08b10ed379001d408ad562e8427a561, type: 3}
+  enemyHealthBar: {fileID: 0}
   listShotPoint:
   - {fileID: 9212088069245591509}
   - {fileID: 9212088069641321732}
   - {fileID: 9212088069931114603}
   - {fileID: 9212088069407232748}
+  bulletSkill2: {fileID: 6954586880181985558, guid: 7a13391abcc37e54086011419549c253, type: 3}
   skillCD:
   - 0
   - 0
   skillCDSetting:
-  - 0.5
-  - 0.5
-  bossHealth: 1000
-  maxHealth: 1000
+  - 0.3
+  - 0.3
+  currentHealth: 0
+  maxHealth: 2000
   bossDamage: 50
   bossShotingRange: 6
---- !u!95 &9212088070735592353
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9212088070735592377}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 97e720d9796d34648a6ac6def924072e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0

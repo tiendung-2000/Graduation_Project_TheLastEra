@@ -46,12 +46,16 @@ public class PlayerSkill : MonoBehaviour
             if (player.currentMana >= 25)
             {
                 player.ManaChange(manaCost[0]);
-                ShurikenSkill();
+                Ultimate();
             }
-            Ultimate();
         }
 
-        if(currentCoolDown[1] > 0)
+        if (currentCoolDown[0] > 0)
+        {
+            currentCoolDown[0] -= Time.deltaTime;
+        }
+
+        if (currentCoolDown[1] > 0)
         {
             currentCoolDown[1] -= Time.deltaTime;
         }

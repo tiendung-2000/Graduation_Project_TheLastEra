@@ -360,8 +360,8 @@ MonoBehaviour:
     m_Bits: 1024
   canShot: 0
   onView: 0
-  onZone: 0
-  playerOnZone: 0
+  onZone: 1
+  playerOnZone: 1
   decision: 0
   timeTMNDSetting: 0
   stage: 0
@@ -378,7 +378,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossBullet: {fileID: 7162935803346078546, guid: dfbd7409f428fcd41b96e0ff620cef21, type: 3}
-  bossShotPoint: {fileID: 2142043700629582711}
+  bossShootPoint: {fileID: 2142043702374360833}
+  deathEffect: {fileID: 7704356935644933768, guid: 44a508aca2c396d4e947e772523f8708, type: 3}
+  enemyHealthBar: {fileID: 0}
   listShotPoint:
   - {fileID: 2142043701421696467}
   - {fileID: 2142043700629582708}
@@ -391,8 +393,8 @@ MonoBehaviour:
   skillCDSetting:
   - 0.2
   - 0.3
-  bossHealth: 1000
-  maxHealth: 1000
+  currentHealth: 0
+  maxHealth: 1500
   bossDamage: 10
   bossShotingRange: 6
 --- !u!1 &2142043702374360833

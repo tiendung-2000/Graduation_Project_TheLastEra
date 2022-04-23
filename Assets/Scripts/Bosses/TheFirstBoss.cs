@@ -8,8 +8,9 @@ public class TheFirstBoss : MonoBehaviour
     private Player player;
     private Bullet bullet;
     public GameObject bossBullet;
-    public GameObject bossShotPoint;
+    public GameObject bossShootPoint;
     public GameObject deathEffect;
+    public EnemyHealthBarBehavior enemyHealthBar;
 
     public List<Transform> listShotPoint;
 
@@ -20,20 +21,10 @@ public class TheFirstBoss : MonoBehaviour
 
     EnemyAI bossAI;
 
-    public float bossHealth;
+    public float currentHealth;
     public float maxHealth;
     public float bossDamage;
     public float bossShotingRange;
-
-    UI_BarManager barManager;
-    UI_BarController healthBarController;
-
-    private void Start()
-    {
-        barManager = UI_BarManager.instance;
-        healthBarController = barManager.GetBarController(BarName.E_HealthBar);
-        healthBarController.OnInit(bossHealth, maxHealth);
-    }
 
     private void Awake()
     {
@@ -41,6 +32,11 @@ public class TheFirstBoss : MonoBehaviour
         bossAI = GetComponent<EnemyAI>();
     }
 
+    void Start()
+    {
+        currentHealth = maxHealth;
+        enemyHealthBar.SetHealthBar(currentHealth, maxHealth);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -53,24 +49,25 @@ public class TheFirstBoss : MonoBehaviour
         }
 
         //----------------------------Take Damage-----------------
+        //PlayerWeapon
         if (collision.gameObject.layer == 12)
         {
             player = collision.GetComponentInParent<Player>();
             ChangeHP(-player.playerDamage);
         }
-
+        //PlayerBullet
         if (collision.gameObject.layer == 13)
         {
             bullet = collision.GetComponentInParent<Bullet>();
             ChangeHP(-bullet.bulletDamage);
         }
-
+        //PlayerUltimate
         if (collision.gameObject.layer == 14)
         {
             float damage = PlayerSkill.instance.skills[1].skillDamage;
             ChangeHP(-damage);
         }
-
+        //PlayerSkill
         if (collision.gameObject.layer == 15)
         {
             float damage = PlayerSkill.instance.skills[0].skillDamage;
@@ -80,7 +77,7 @@ public class TheFirstBoss : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (bossHealth <= 0)
+        if (currentHealth <= 0)
         {
             bossAni.SetBool("BossDead", true);
             Destroy(gameObject, 0.5f);
@@ -90,7 +87,7 @@ public class TheFirstBoss : MonoBehaviour
 
     void Update()
     {
-        if(bossHealth > 0)
+        if(currentHealth > 0 && bossAI.canShot)
         {
             //Boss Skill Time Count
             for (int i = 0; i < skillCD.Count; i++)
@@ -99,25 +96,25 @@ public class TheFirstBoss : MonoBehaviour
                     skillCD[i] -= Time.deltaTime;
             }
 
-            if (skillCD[0] <= 0f && bossHealth >= 500f)
-                Skill1();
+            if (skillCD[0] <= 0f && currentHealth >= 500f)
+                NormalShooting();
 
-            if (skillCD[1] <= 0f && bossHealth <= 500f)
-                Skill2();
+            if (skillCD[1] <= 0f && currentHealth <= 500f)
+                FourDirectionsShooting();
         }
     }
 
-    void Skill1()
+    void NormalShooting()
     {
-        //ban thuong        
-            GameObject bulletCreate = Instantiate(bossBullet, bossShotPoint.transform.position, Quaternion.identity);
+        //Normal Shooting       
+            GameObject bulletCreate = Instantiate(bossBullet, bossShootPoint.transform.position, Quaternion.identity);
             bulletCreate.GetComponent<BulletEnemy>().myDamage = bossDamage;
         skillCD[0] = skillCDSetting[0];
     }
 
-    void Skill2()
+    void FourDirectionsShooting()
     {
-        //ban 4 huong
+        //Shoot 4 direction 
         float angle = 90;
         for(int i =0; i < listShotPoint.Count; i++)
         {
@@ -133,13 +130,12 @@ public class TheFirstBoss : MonoBehaviour
 
     public void ChangeHP(float value)
     {
-        bossHealth += value;
-        if (bossHealth > maxHealth)
-            bossHealth = maxHealth;
-        if (bossHealth < 0)
-            bossHealth = 0;
-
-        healthBarController.OnChangeValue(-value);
+        currentHealth += value;
+        if (currentHealth > maxHealth)
+            currentHealth = maxHealth;
+        if (currentHealth < 0)
+            currentHealth = 0;
+        enemyHealthBar.SetHealthBar(currentHealth, maxHealth);
     }
 
     private void DeathEffect()

@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 7130191095551181498}
   - component: {fileID: 7130191095551181493}
   - component: {fileID: 7130191095551181492}
-  - component: {fileID: 7130191095551181494}
+  - component: {fileID: 2142899442}
   - component: {fileID: 7130191095551181495}
   m_Layer: 11
   m_Name: FirstBoss
@@ -274,7 +274,7 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
---- !u!114 &7130191095551181494
+--- !u!114 &2142899442
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -288,16 +288,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {x: 0, y: 0, z: 0}
   distanceToNextPoint: 0.2
-  speed: 2
-  distanceToFollow: 7
-  distanceToStop: 5
+  speed: 1
+  distanceToFollow: 5
+  distanceToStop: 3
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 1024
   canShot: 0
   onView: 0
-  onZone: 0
-  playerOnZone: 0
+  onZone: 1
+  playerOnZone: 1
   decision: 0
   timeTMNDSetting: 0
   stage: 0
@@ -313,24 +313,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 967bf90b1b445d440a61175f3a9cc031, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossBullet: {fileID: 2474563456486306131, guid: 98e99b2b98ce8064cb76214cb126d4b6, type: 3}
-  bossShotPoint: {fileID: 7130191095034906967}
+  bossBullet: {fileID: 354254811777562553, guid: 01b230087b90af145986abc682e2af86, type: 3}
+  bossShootPoint: {fileID: 7130191096905612954}
   deathEffect: {fileID: 598448547400678221, guid: f08670e96f4c48f448b0764b1c8eeff4, type: 3}
+  enemyHealthBar: {fileID: 0}
   listShotPoint:
   - {fileID: 7130191095752871844}
   - {fileID: 7130191095034906964}
   - {fileID: 7130191095116200770}
   - {fileID: 7130191095002277703}
-  bulletSkill2: {fileID: 2878018462839007537, guid: c9e6c555dfaf381458358cbed6c752b7, type: 3}
+  bulletSkill2: {fileID: 327747741160991643, guid: a3970f8196100af458860916285b06f6, type: 3}
   skillCD:
   - 0
   - 0
   skillCDSetting:
   - 0.3
   - 0.3
-  bossHealth: 1000
+  currentHealth: 0
   maxHealth: 1000
-  bossDamage: 50
+  bossDamage: 20
   bossShotingRange: 6
 --- !u!1 &7130191095752871847
 GameObject:
