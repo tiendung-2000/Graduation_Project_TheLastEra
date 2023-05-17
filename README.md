@@ -1,6 +1,6 @@
 # The Last Era
 
-<img src="https://i.imgur.com/vc3ylH1.jpg" style="width: 100%">
+<img src="https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-6/306346938_508363414627833_1285378853826597793_n.png?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=7ed9_0919b8AX9upasZ&_nc_ht=scontent.fhan18-1.fna&oh=00_AfDVumUVrp5uOOcqVEkN5yXexpVvbb6mK5b-p-8-nyUFSA&oe=646999AC" style="width: 100%">
 
 > A brief description of the project.
 
