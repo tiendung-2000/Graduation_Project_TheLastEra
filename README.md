@@ -1,38 +1,30 @@
-# Project Name
+# The Last Era
 
-![Project Image](path/to/your/image.jpg)
+<img src="https://i.imgur.com/vc3ylH1.jpg" style="width: 100%">
 
-## Description
-
-A brief description of your project goes here. Explain what it does and why it's useful or interesting.
+> A brief description of the project.
 
 ## Table of Contents
 
+- [Description](#description)
+- [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- [Contact](#contact)
+
+## Description
+
+Provide a detailed description of the project, including its purpose and any relevant information.
+
+## Features
+
+- List the key features and functionalities of the project.
+- Describe how users can benefit from using the project.
 
 ## Installation
 
-Provide instructions on how to install and set up your project. Include any dependencies and environment setup needed.
-
-## Usage
-
-Explain how to use your project, provide examples, and showcase its features. You can also include screenshots or additional images here.
-
-## Contributing
-
-State how other developers can contribute to your project. Include guidelines for submitting pull requests, reporting issues, and any code standards.
-
-## License
-
-Specify the license under which your project is distributed. For example:
-
-This project is licensed under the [MIT License](LICENSE.md).
+Provide step-by-step instructions on how to install and set up the project locally. Include any dependencies or prerequisites required.
 
 ## Contact
 
-You can find me on [Facebook](https://www.facebook.com/your-profile)!
-
-[![Facebook Logo](path/to/facebook-logo.png)](https://www.facebook.com/your-profile)
+- Email: tiendung2000tn@gmail.com
+- Connect with us on [Facebook](https://www.facebook.com/isnotdino)
